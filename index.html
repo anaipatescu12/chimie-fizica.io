@@ -31,17 +31,31 @@
             scroll-behavior: smooth;
         }
 
-        /* Header */
+        /* Header & Logos */
         header {
             background: linear-gradient(135deg, var(--physics-color), var(--chemistry-color));
             color: white;
-            padding: 100px 20px;
+            padding: 60px 20px 100px 20px;
             text-align: center;
             clip-path: polygon(0 0, 100% 0, 100% 85%, 0% 100%);
         }
 
+        .logo-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+
+        .logo-container img {
+            height: 80px; /* Ajustează înălțimea logo-urilor aici */
+            width: auto;
+            filter: drop-shadow(2px 2px 4px rgba(0,0,0,0.2));
+        }
+
         header h1 {
-            font-size: 3.5rem;
+            font-size: 3rem;
             margin-bottom: 10px;
             text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
         }
@@ -95,8 +109,6 @@
             transform: translateX(-50%);
         }
 
-        .icon { font-size: 2.5rem; margin-bottom: 20px; display: block; }
-
         /* Stiluri Catedra Profesori */
         .teachers-grid {
             display: grid;
@@ -115,7 +127,7 @@
             transition: 0.3s ease;
         }
 
-        .teacher-card:hover { transform: translateY(-5px); box-shadow: 0 6px 20px rgba(0,0,0,0.1); }
+        .teacher-card:hover { transform: translateY(-5px); }
         .chemistry-border { border-left: 5px solid var(--chemistry-color); }
         .physics-border { border-left: 5px solid var(--physics-color); }
 
@@ -132,7 +144,6 @@
         .discipline { color: var(--chemistry-color); font-size: 0.85rem; font-weight: 600; }
         .discipline-phys { color: var(--physics-color); font-size: 0.85rem; font-weight: 600; }
 
-        /* List Items */
         ul { list-style: none; }
         ul li {
             margin-bottom: 12px;
@@ -148,7 +159,6 @@
             color: var(--chemistry-color);
         }
 
-        /* Testimonials */
         .testimonials {
             background: var(--primary-color);
             color: white;
@@ -180,7 +190,8 @@
         }
 
         @media (max-width: 768px) {
-            header h1 { font-size: 2.5rem; }
+            header h1 { font-size: 2.2rem; }
+            .logo-container img { height: 60px; }
             .teacher-card { flex-direction: column; text-align: center; }
             .teacher-img img { margin-right: 0; margin-bottom: 10px; }
         }
@@ -189,6 +200,10 @@
 <body>
 
     <header>
+        <div class="logo-container">
+            <img src="Logo_LTAI.png" alt="Logo Liceul Teoretic Ana Ipătescu">
+            <img src="LogoCatedra_FizicaChimie.png" alt="Logo Catedra Fizică Chimie">
+        </div>
         <h1>Științele Naturii: Chimie & Fizică</h1>
         <p>Liceul Teoretic „Ana Ipătescu” Gherla</p>
     </header>
@@ -231,62 +246,18 @@
 
         <section class="grid">
             <div class="card chemistry-card">
-                <i class="fas fa-flask icon" style="color: var(--chemistry-color);"></i>
+                <i class="fas fa-flask" style="font-size: 2.5rem; margin-bottom: 20px; color: var(--chemistry-color); display: block;"></i>
                 <h3>De ce Chimie?</h3>
-                <p>Ne ajută să înțelegem din ce este alcătuită lumea și cum se transformă materia. Explică procesele vieții, având un rol esențial în medicină și tehnologie.</p>
+                <p>Ne ajută să înțelegem din ce este alcătuită lumea și cum se transformă materia.</p>
             </div>
             <div class="card physics-card">
-                <i class="fas fa-atom icon" style="color: var(--physics-color);"></i>
+                <i class="fas fa-atom" style="font-size: 2.5rem; margin-bottom: 20px; color: var(--physics-color); display: block;"></i>
                 <h3>De ce Fizică?</h3>
-                <p>Fizica explică legile fundamentale ale naturii: mișcarea, energia și lumina. Este baza tehnologiilor moderne care ne înconjoară.</p>
+                <p>Fizica explică legile fundamentale ale naturii: mișcarea, energia și lumina.</p>
             </div>
         </section>
 
-        <section id="aplicatii">
-            <h2>Cum le aplicăm în viața reală?</h2>
-            <div class="grid">
-                <div class="card">
-                    <ul>
-                        <li><strong>Experimente:</strong> Vedem direct reacțiile chimice și fenomenele fizice.</li>
-                        <li><strong>Exemple practice:</strong> Gătitul, energia electrică, mișcarea mașinilor.</li>
-                        <li><strong>Probleme reale:</strong> Rezolvăm provocări extrase din cotidian.</li>
-                        <li><strong>Observare:</strong> Explicăm mediul înconjurător prin legi științifice.</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-
-        <section class="grid">
-            <div class="card">
-                <h3><i class="fas fa-microscope"></i> Resursele noastre</h3>
-                <p>Dispunem de laboratoare dotate cu eprubete, circuite electrice și aparate de măsură, completate de îndrumarea profesorilor.</p>
-            </div>
-            <div class="card">
-                <h3><i class="fas fa-chalkboard-teacher"></i> Cum se desfășoară orele?</h3>
-                <p>Îmbinăm teoria cu practica. Lucrăm în echipă, discutăm rezultatele experimentelor și tragem concluzii logice.</p>
-            </div>
-        </section>
-
-        <section style="text-align: center;">
-            <h2>La ce participăm?</h2>
-            <div class="card" style="max-width: 800px; margin: 0 auto;">
-                <p>De la olimpiade județene și naționale, la târguri de știință și proiecte educaționale care ne dezvoltă gândirea critică.</p>
-            </div>
-        </section>
-
-    </div>
-
-    <section class="testimonials">
-        <div class="container">
-            <h2 style="color: #e67e22 !important;">Cum văd elevii orele?</h2>
-            <div class="testimonial-grid">
-                <div class="testimonial-item">"Ora de chimie îmi place când facem experimente." <span class="author">Ariana, 11A</span></div>
-                <div class="testimonial-item">"La fizică mi se pare interesant când legăm lecțiile de viață." <span class="author">Eliza, 12B</span></div>
-                <div class="testimonial-item">"Dacă sunt atent, încep să înțeleg orice formulă." <span class="author">Berta, 11B</span></div>
-                <div class="testimonial-item">"Îmi plac orele în care lucrăm în echipă." <span class="author">Albert, 12A</span></div>
-            </div>
         </div>
-    </section>
 
     <footer>
         <p>&copy; Liceul Teoretic „Ana Ipătescu” Gherla, 2026</p>
