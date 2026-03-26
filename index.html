@@ -31,11 +31,11 @@
             scroll-behavior: smooth;
         }
 
-        /* Header & Logos */
+        /* --- HEADER & LOGOS (MĂRITE) --- */
         header {
             background: linear-gradient(135deg, var(--physics-color), var(--chemistry-color));
             color: white;
-            padding: 60px 20px 100px 20px;
+            padding: 80px 20px 120px 20px;
             text-align: center;
             clip-path: polygon(0 0, 100% 0, 100% 85%, 0% 100%);
         }
@@ -44,156 +44,72 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            gap: 20px;
-            margin-bottom: 20px;
+            gap: 40px; /* Mai mult spațiu între logo-uri */
+            margin-bottom: 30px;
         }
 
         .logo-container img {
-            height: 80px; /* Ajustează înălțimea logo-urilor aici */
+            height: 120px; /* Mărit considerabil de la 80px */
             width: auto;
-            filter: drop-shadow(2px 2px 4px rgba(0,0,0,0.2));
+            filter: drop-shadow(3px 3px 6px rgba(0,0,0,0.3));
         }
 
         header h1 {
-            font-size: 3rem;
+            font-size: 3.5rem;
             margin-bottom: 10px;
             text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
         }
 
+        /* --- CATEDRA PROFESORI (MĂRITE) --- */
         .container {
             max-width: 1100px;
             margin: 0 auto;
             padding: 20px;
         }
 
-        section {
-            padding: 40px 0;
-        }
-
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-            margin-top: 40px;
-        }
-
-        .card {
-            background: var(--white);
-            padding: 30px;
-            border-radius: 15px;
-            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
-            transition: transform 0.3s ease;
-            border-bottom: 5px solid transparent;
-        }
-
-        .card:hover { transform: translateY(-10px); }
-        .chemistry-card { border-color: var(--chemistry-color); }
-        .physics-card { border-color: var(--physics-color); }
-
-        h2 {
-            color: var(--primary-color);
-            text-align: center;
-            font-size: 2.2rem;
-            margin-bottom: 30px;
-            position: relative;
-        }
-
-        h2::after {
-            content: '';
-            width: 50px;
-            height: 4px;
-            background: var(--accent-color);
-            position: absolute;
-            bottom: -10px;
-            left: 50%;
-            transform: translateX(-50%);
-        }
-
-        /* Stiluri Catedra Profesori */
         .teachers-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 20px;
-            margin-top: 20px;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 25px;
+            margin-top: 30px;
         }
 
         .teacher-card {
             display: flex;
             align-items: center;
             background: white;
-            padding: 15px;
-            border-radius: 12px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+            padding: 25px; /* Mai mult padding intern */
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
             transition: 0.3s ease;
         }
 
         .teacher-card:hover { transform: translateY(-5px); }
-        .chemistry-border { border-left: 5px solid var(--chemistry-color); }
-        .physics-border { border-left: 5px solid var(--physics-color); }
 
         .teacher-img img {
-            width: 70px;
-            height: 70px;
+            width: 100px; /* Mărit de la 70px */
+            height: 100px; /* Mărit de la 70px */
             border-radius: 50%;
             object-fit: cover;
-            margin-right: 15px;
-            border: 2px solid #eee;
+            margin-right: 20px;
+            border: 3px solid #eee;
         }
 
-        .teacher-info h4 { margin: 0; font-size: 1.1rem; color: var(--primary-color); }
-        .discipline { color: var(--chemistry-color); font-size: 0.85rem; font-weight: 600; }
-        .discipline-phys { color: var(--physics-color); font-size: 0.85rem; font-weight: 600; }
+        .teacher-info h4 { font-size: 1.3rem; margin-bottom: 5px; }
+        .chemistry-border { border-left: 8px solid var(--chemistry-color); }
+        .physics-border { border-left: 8px solid var(--physics-color); }
 
-        ul { list-style: none; }
-        ul li {
-            margin-bottom: 12px;
-            padding-left: 30px;
-            position: relative;
-        }
-        ul li::before {
-            content: '\f00c';
-            font-family: 'Font Awesome 5 Free';
-            font-weight: 900;
-            position: absolute;
-            left: 0;
-            color: var(--chemistry-color);
-        }
+        /* Stiluri restul paginii */
+        section { padding: 50px 0; }
+        h2 { text-align: center; font-size: 2.5rem; margin-bottom: 40px; position: relative; }
+        h2::after { content: ''; width: 60px; height: 4px; background: var(--accent-color); position: absolute; bottom: -12px; left: 50%; transform: translateX(-50%); }
 
-        .testimonials {
-            background: var(--primary-color);
-            color: white;
-            padding: 80px 20px;
-            border-radius: 50px 50px 0 0;
-            margin-top: 50px;
-        }
-
-        .testimonial-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-        }
-
-        .testimonial-item {
-            background: rgba(255,255,255,0.1);
-            padding: 20px;
-            border-left: 4px solid var(--accent-color);
-            font-style: italic;
-        }
-
-        .author { display: block; margin-top: 10px; font-weight: bold; color: var(--accent-color); }
-
-        footer {
-            text-align: center;
-            padding: 40px;
-            background: #1a252f;
-            color: white;
-        }
-
+        /* Responsive */
         @media (max-width: 768px) {
-            header h1 { font-size: 2.2rem; }
-            .logo-container img { height: 60px; }
+            header h1 { font-size: 2.5rem; }
+            .logo-container img { height: 80px; }
             .teacher-card { flex-direction: column; text-align: center; }
-            .teacher-img img { margin-right: 0; margin-bottom: 10px; }
+            .teacher-img img { margin-right: 0; margin-bottom: 15px; }
         }
     </style>
 </head>
@@ -201,65 +117,54 @@
 
     <header>
         <div class="logo-container">
-            <img src="Logo_LTAI.png" alt="Logo Liceul Teoretic Ana Ipătescu">
-            <img src="LogoCatedra_FizicaChimie.png" alt="Logo Catedra Fizică Chimie">
+            <img src="Logo_LTAI.png" alt="Logo LTAI">
+            <img src="LogoCatedra_FizicaChimie.png" alt="Logo Catedra">
         </div>
-        <h1>Științele Naturii: Chimie & Fizică</h1>
+        <h1>Chimie & Fizică</h1>
         <p>Liceul Teoretic „Ana Ipătescu” Gherla</p>
     </header>
 
     <div class="container">
         
-        <section id="profesori">
+        <section>
             <h2 style="color: var(--chemistry-color) !important;">Catedra de Chimie</h2>
             <div class="teachers-grid">
                 <div class="teacher-card chemistry-border">
-                    <div class="teacher-img"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ45c5TpNBviqg2cB0eIE0tVPerK2kWPlh3Zw&s" alt="Mureșan Doina"></div>
-                    <div class="teacher-info"><h4>Mureșan Doina</h4><p class="discipline">Profesor de Chimie</p></div>
+                    <div class="teacher-img"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ45c5TpNBviqg2cB0eIE0tVPerK2kWPlh3Zw&s"></div>
+                    <div class="teacher-info"><h4>Mureșan Doina</h4><p style="color: var(--chemistry-color); font-weight: 600;">Profesor de Chimie</p></div>
                 </div>
                 <div class="teacher-card chemistry-border">
-                    <div class="teacher-img"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ45c5TpNBviqg2cB0eIE0tVPerK2kWPlh3Zw&s" alt="Bărăian Laurența"></div>
-                    <div class="teacher-info"><h4>Bărăian Laurența</h4><p class="discipline">Profesor de Chimie</p></div>
+                    <div class="teacher-img"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ45c5TpNBviqg2cB0eIE0tVPerK2kWPlh3Zw&s"></div>
+                    <div class="teacher-info"><h4>Bărăian Laurența</h4><p style="color: var(--chemistry-color); font-weight: 600;">Profesor de Chimie</p></div>
                 </div>
                 <div class="teacher-card chemistry-border">
-                    <div class="teacher-img"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ45c5TpNBviqg2cB0eIE0tVPerK2kWPlh3Zw&s" alt="Dunca Livia"></div>
-                    <div class="teacher-info"><h4>Dunca Livia</h4><p class="discipline">Profesor de Chimie</p></div>
+                    <div class="teacher-img"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ45c5TpNBviqg2cB0eIE0tVPerK2kWPlh3Zw&s"></div>
+                    <div class="teacher-info"><h4>Dunca Livia</h4><p style="color: var(--chemistry-color); font-weight: 600;">Profesor de Chimie</p></div>
                 </div>
             </div>
+        </section>
 
-            <h2 style="color: var(--physics-color) !important; margin-top: 50px;">Catedra de Fizică</h2>
+        <section>
+            <h2 style="color: var(--physics-color) !important;">Catedra de Fizică</h2>
             <div class="teachers-grid">
                 <div class="teacher-card physics-border">
-                    <div class="teacher-img"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ45c5TpNBviqg2cB0eIE0tVPerK2kWPlh3Zw&s" alt="Cioabă Felicia"></div>
-                    <div class="teacher-info"><h4>Cioabă Felicia</h4><p class="discipline-phys">Profesor de Fizică</p></div>
+                    <div class="teacher-img"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ45c5TpNBviqg2cB0eIE0tVPerK2kWPlh3Zw&s"></div>
+                    <div class="teacher-info"><h4>Cioabă Felicia</h4><p style="color: var(--physics-color); font-weight: 600;">Profesor de Fizică</p></div>
                 </div>
                 <div class="teacher-card physics-border">
-                    <div class="teacher-img"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ45c5TpNBviqg2cB0eIE0tVPerK2kWPlh3Zw&s" alt="Vădan Cosmina"></div>
-                    <div class="teacher-info"><h4>Vădan Cosmina</h4><p class="discipline-phys">Profesor de Fizică</p></div>
+                    <div class="teacher-img"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ45c5TpNBviqg2cB0eIE0tVPerK2kWPlh3Zw&s"></div>
+                    <div class="teacher-info"><h4>Vădan Cosmina</h4><p style="color: var(--physics-color); font-weight: 600;">Profesor de Fizică</p></div>
                 </div>
                 <div class="teacher-card physics-border">
-                    <div class="teacher-img"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ45c5TpNBviqg2cB0eIE0tVPerK2kWPlh3Zw&s" alt="Tetean Dinu"></div>
-                    <div class="teacher-info"><h4>Tetean Dinu</h4><p class="discipline-phys">Profesor de Fizică</p></div>
+                    <div class="teacher-img"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ45c5TpNBviqg2cB0eIE0tVPerK2kWPlh3Zw&s"></div>
+                    <div class="teacher-info"><h4>Tetean Dinu</h4><p style="color: var(--physics-color); font-weight: 600;">Profesor de Fizică</p></div>
                 </div>
             </div>
         </section>
 
-        <section class="grid">
-            <div class="card chemistry-card">
-                <i class="fas fa-flask" style="font-size: 2.5rem; margin-bottom: 20px; color: var(--chemistry-color); display: block;"></i>
-                <h3>De ce Chimie?</h3>
-                <p>Ne ajută să înțelegem din ce este alcătuită lumea și cum se transformă materia.</p>
-            </div>
-            <div class="card physics-card">
-                <i class="fas fa-atom" style="font-size: 2.5rem; margin-bottom: 20px; color: var(--physics-color); display: block;"></i>
-                <h3>De ce Fizică?</h3>
-                <p>Fizica explică legile fundamentale ale naturii: mișcarea, energia și lumina.</p>
-            </div>
-        </section>
+    </div>
 
-        </div>
-
-    <footer>
+    <footer style="text-align: center; padding: 40px; background: #1a252f; color: white;">
         <p>&copy; Liceul Teoretic „Ana Ipătescu” Gherla, 2026</p>
     </footer>
 
