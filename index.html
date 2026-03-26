@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chimie-Fizică | Școala Noastră</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --chemistry-color: #27ae60;
+            --physics-color: #2980b9;
+            --accent-color: #e67e22;
+            --bg-light: #f4f7f6;
+            --white: #ffffff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: var(--primary-color);
+            background-color: var(--bg-light);
+            scroll-behavior: smooth;
+        }
+
+        /* Header & Nav */
+        header {
+            background: linear-gradient(135deg, var(--physics-color), var(--chemistry-color));
+            color: white;
+            padding: 100px 20px;
+            text-align: center;
+            clip-path: polygon(0 0, 100% 0, 100% 85%, 0% 100%);
+        }
+
+        header h1 {
+            font-size: 3.5rem;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Section Styling */
+        section {
+            padding: 60px 0;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .card {
+            background: var(--white);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease;
+            border-bottom: 5px solid transparent;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+        }
+
+        .chemistry-card { border-color: var(--chemistry-color); }
+        .physics-card { border-color: var(--physics-color); }
+
+        h2 {
+            color: var(--primary-color);
+            text-align: center;
+            font-size: 2.2rem;
+            margin-bottom: 30px;
+            position: relative;
+        }
+
+        h2::after {
+            content: '';
+            width: 50px;
+            height: 4px;
+            background: var(--accent-color);
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .icon {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            display: block;
+        }
+
+        /* List Items */
+        ul {
+            list-style: none;
+        }
+
+        ul li {
+            margin-bottom: 12px;
+            padding-left: 30px;
+            position: relative;
+        }
+
+        ul li::before {
+            content: '\f00c';
+            font-family: 'Font Awesome 5 Free';
+            font-weight: 900;
+            position: absolute;
+            left: 0;
+            color: var(--chemistry-color);
+        }
+
+        /* Testimonials */
+        .testimonials {
+            background: var(--primary-color);
+            color: white;
+            padding: 80px 20px;
+            border-radius: 50px 50px 0 0;
+        }
+
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .testimonial-item {
+            background: rgba(255,255,255,0.1);
+            padding: 20px;
+            border-left: 4px solid var(--accent-color);
+            font-style: italic;
+        }
+
+        .author {
+            display: block;
+            margin-top: 10px;
+            font-weight: bold;
+            font-style: normal;
+            color: var(--accent-color);
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px;
+            background: #1a252f;
+            color: white;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            header h1 { font-size: 2.5rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Științele Naturii: Chimie & Fizică</h1>
+        <p>Descoperă tainele universului prin experiment și pasiune</p>
+    </header>
+
+    <div class="container">
+        
+        <section class="grid">
+            <div class="card chemistry-card">
+                <i class="fas fa-flask icon" style="color: var(--chemistry-color);"></i>
+                <h3>De ce Chimie?</h3>
+                <p>Ne ajută să înțelegem din ce este alcătuită lumea și cum se transformă materia. Explică procesele vieții, de la reacțiile din organism la fenomenele naturii, având un rol esențial în medicină și tehnologie.</p>
+            </div>
+            <div class="card physics-card">
+                <i class="fas fa-atom icon" style="color: var(--physics-color);"></i>
+                <h3>De ce Fizică?</h3>
+                <p>Fizica explică legile fundamentale ale naturii: mișcarea, energia, lumina sau gravitația. Este baza tehnologiilor moderne, de la electricitate la aparatura medicală care ne salvează viețile.</p>
+            </div>
+        </section>
+
+        <section id="aplicatii">
+            <h2>Cum le aplicăm în viața reală?</h2>
+            <p style="text-align: center; margin-bottom: 30px;">Nu doar memorăm formule, ci observăm lumea prin lentila științei:</p>
+            <div class="grid">
+                <div class="card">
+                    <ul>
+                        <li><strong>Experimente:</strong> Vedem direct reacțiile chimice și fenomenele fizice.</li>
+                        <li><strong>Exemple practice:</strong> Gătitul, energia electrică, mișcarea mașinilor.</li>
+                        <li><strong>Probleme reale:</strong> Rezolvăm provocări extrase din cotidian.</li>
+                        <li><strong>Observare:</strong> Explicăm mediul înconjurător prin legi științifice.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        
+
+        <section class="grid">
+            <div class="card">
+                <h3><i class="fas fa-microscope"></i> Resursele noastre</h3>
+                <p>Dispunem de laboratoare dotate cu eprubete, circuite electrice, aparate de măsură și substanțe chimice. Totul este completat de materiale digitale și îndrumarea atentă a profesorilor.</p>
+            </div>
+            <div class="card">
+                <h3><i class="fas fa-chalkboard-teacher"></i> Cum se desfășoară orele?</h3>
+                <p>Îmbinăm teoria cu practica. Lucrăm în echipă, discutăm rezultatele experimentelor și tragem concluzii care ne ajută să înțelegem "de ce-ul" din spatele fiecărui fenomen.</p>
+            </div>
+        </section>
+
+        <section style="text-align: center;">
+            <h2>La ce participăm?</h2>
+            <div class="card" style="max-width: 800px; margin: 0 auto;">
+                <p>De la olimpiade județene și naționale, la târguri de știință și proiecte educaționale. Ne dezvoltăm creativitatea, gândirea critică și spiritul de observație în fiecare activitate!</p>
+            </div>
+        </section>
+
+    </div>
+
+    <section class="testimonials">
+        <div class="container">
+            <h2>Cum văd elevii?</h2>
+            <div class="testimonial-grid">
+                <div class="testimonial-item">
+                    "Ora de chimie îmi place când facem experimente, pentru că văd exact cum reacționează substanțele."
+                    <span class="author">Ariana, 11A</span>
+                </div>
+                <div class="testimonial-item">
+                    "La fizică mi se pare interesant când legăm lecțiile de viața reală – atunci chiar are sens."
+                    <span class="author">Eliza, 12B</span>
+                </div>
+                <div class="testimonial-item">
+                    "Uneori este dificil, dar dacă exersez și sunt atent, încep să înțeleg."
+                    <span class="author">Berta, 11B</span>
+                </div>
+                <div class="testimonial-item">
+                    "Îmi plac orele în care lucrăm în echipă, ne ajutăm între noi să rezolvăm problemele."
+                    <span class="author">Albert, 12A</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Proiect Educațional Chimie-Fizică. Creat pentru viitorii cercetători.</p>
+    </footer>
+
+</body>
+</html>
