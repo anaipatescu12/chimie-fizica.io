@@ -17,11 +17,7 @@
             --white: #ffffff;
         }
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
 
         body {
             font-family: 'Poppins', sans-serif;
@@ -31,33 +27,26 @@
             scroll-behavior: smooth;
         }
 
+        /* --- HEADER FĂRĂ LOGO --- */
         header {
             background: linear-gradient(135deg, var(--physics-color), var(--chemistry-color));
             color: white;
-            padding: 100px 20px;
+            padding: 80px 20px;
             text-align: center;
             clip-path: polygon(0 0, 100% 0, 100% 85%, 0% 100%);
         }
 
-        header h1 {
-            font-size: 3.5rem;
-            margin-bottom: 10px;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
-        }
+        header h1 { font-size: 3rem; margin-bottom: 10px; text-shadow: 2px 2px 4px rgba(0,0,0,0.2); }
 
-        .container {
-            max-width: 1100px;
-            margin: 0 auto;
-            padding: 20px;
-        }
+        .container { max-width: 1100px; margin: 0 auto; padding: 20px; }
 
-        section { padding: 40px 0; }
+        section { padding: 30px 0; }
 
-        /* --- CATEDRA PROFESORI (STIL NOU) --- */
+        /* --- CATEDRA PROFESORI --- */
         .teachers-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 30px;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
             margin-top: 20px;
         }
 
@@ -65,128 +54,122 @@
             display: flex;
             align-items: center;
             background: white;
-            padding: 30px;
+            padding: 25px;
             border-radius: 20px;
             box-shadow: 0 10px 25px rgba(0,0,0,0.05);
             transition: transform 0.3s ease;
-            min-height: 160px;
         }
 
-        .teacher-card:hover { transform: translateY(-10px); }
-
+        .teacher-card:hover { transform: translateY(-5px); }
         .chemistry-border { border-left: 10px solid var(--chemistry-color); }
         .physics-border { border-left: 10px solid var(--physics-color); }
 
         .teacher-img img {
-            width: 110px !important;
-            height: 110px !important;
+            width: 100px !important;
+            height: 100px !important;
             border-radius: 50%;
             object-fit: cover;
-            margin-right: 25px;
-            border: 4px solid #f0f0f0;
+            margin-right: 20px;
+            border: 3px solid #f0f0f0;
             flex-shrink: 0;
         }
         
-        .teacher-info h4 { font-size: 1.4rem; margin-bottom: 5px; color: var(--primary-color); }
-        .discipline { color: var(--chemistry-color); font-weight: 600; font-size: 0.9rem; }
-        .discipline-phys { color: var(--physics-color); font-weight: 600; font-size: 0.9rem; }
+        .teacher-info h4 { font-size: 1.2rem; margin-bottom: 5px; }
+        .discipline { color: var(--chemistry-color); font-weight: 600; font-size: 0.85rem; }
+        .discipline-phys { color: var(--physics-color); font-weight: 600; font-size: 0.85rem; }
 
-        /* --- CARDS & GRIDS --- */
+        /* --- ACTIVITĂȚI ȘI GALERIE --- */
         .grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-            margin-top: 40px;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
         }
 
         .card {
             background: var(--white);
-            padding: 40px;
-            border-radius: 20px;
-            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
-            transition: 0.3s;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 8px 15px rgba(0,0,0,0.05);
+            text-align: center;
+        }
+
+        .card h4 {
+            font-size: 1rem;
+            margin-top: 12px;
+            color: var(--primary-color);
         }
 
         .img-activity {
             width: 100%;
-            border-radius: 15px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-            transition: 0.4s;
+            height: 180px;
+            border-radius: 12px;
+            object-fit: cover;
+            display: block;
         }
-        .img-activity:hover { transform: scale(1.02); }
 
         .video-box {
             width: 100%;
-            border-radius: 15px;
+            border-radius: 12px;
             overflow: hidden;
             background: #000;
-            margin-bottom: 15px;
+            height: 180px;
         }
+        
+        video { width: 100%; height: 100%; object-fit: cover; }
 
         h2 {
             text-align: center;
-            font-size: 2.2rem;
-            margin-bottom: 40px;
+            font-size: 1.8rem;
+            margin-bottom: 30px;
             position: relative;
         }
 
         h2::after {
             content: '';
-            width: 60px;
-            height: 4px;
+            width: 50px; height: 3px;
             background: var(--accent-color);
-            position: absolute;
-            bottom: -10px;
-            left: 50%;
+            position: absolute; bottom: -8px; left: 50%;
             transform: translateX(-50%);
         }
 
-        ul { list-style: none; }
-        ul li {
-            margin-bottom: 12px;
-            padding-left: 30px;
-            position: relative;
-        }
+        /* --- ALTE ELEMENTE --- */
+        ul { list-style: none; text-align: left; }
+        ul li { margin-bottom: 10px; padding-left: 25px; position: relative; font-size: 0.9rem; }
         ul li::before {
             content: '\f00c';
             font-family: 'Font Awesome 6 Free';
             font-weight: 900;
-            position: absolute;
-            left: 0;
+            position: absolute; left: 0;
             color: var(--chemistry-color);
         }
 
         .testimonials {
             background: var(--primary-color);
             color: white;
-            padding: 80px 20px;
-            border-radius: 50px 50px 0 0;
-            margin-top: 50px;
+            padding: 60px 20px;
+            border-radius: 40px 40px 0 0;
+            margin-top: 40px;
         }
 
         .testimonial-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 15px;
         }
 
         .testimonial-item {
             background: rgba(255,255,255,0.1);
-            padding: 20px;
+            padding: 15px;
             border-left: 4px solid var(--accent-color);
             font-style: italic;
+            font-size: 0.85rem;
         }
 
-        .author { display: block; margin-top: 10px; font-weight: bold; color: var(--accent-color); }
-
-        footer {
-            text-align: center;
-            padding: 40px;
-            background: #1a252f;
-            color: white;
-        }
+        footer { text-align: center; padding: 30px; background: #1a252f; color: white; font-size: 0.8rem; }
 
         @media (max-width: 768px) {
+            header h1 { font-size: 2.2rem; }
             .teacher-card { flex-direction: column; text-align: center; }
             .teacher-img img { margin-right: 0; margin-bottom: 15px; }
         }
@@ -195,7 +178,7 @@
 <body>
 
     <header>
-        <h1>Științele Naturii: Chimie & Fizică</h1>
+        <h1>Chimie & Fizică</h1>
         <p>Liceul Teoretic „Ana Ipătescu” Gherla</p>
     </header>
 
@@ -218,7 +201,7 @@
                 </div>
             </div>
 
-            <h2 style="color: var(--physics-color) !important; margin-top: 60px;">Catedra de Fizică</h2>
+            <h2 style="color: var(--physics-color) !important; margin-top: 40px;">Catedra de Fizică</h2>
             <div class="teachers-grid">
                 <div class="teacher-card physics-border">
                     <div class="teacher-img"><img src="cioaba.png" alt="Cioabă Felicia"></div>
@@ -236,98 +219,67 @@
         </section>
 
         <section>
-            <h2 style="color: var(--chemistry-color) !important;">Laboratorul în Acțiune</h2>
+            <h2 style="color: var(--chemistry-color) !important;">Laborator & Experimente</h2>
             <div class="grid">
                 <div class="card">
                     <img src="laborator_chimie.png" class="img-activity" alt="Laborator">
                 </div>
                 <div class="card">
-                    <div style="display: flex; flex-direction: column; gap: 15px;">
-                        <img src="chimie1.jpg" class="img-activity">
-                        <img src="chimie2.jpg" class="img-activity">
+                    <div style="display: flex; gap: 5px; flex-direction: column;">
+                        <img src="chimie1.jpg" class="img-activity" style="height: 87px; margin-bottom: 5px;">
+                        <img src="chimie2.jpg" class="img-activity" style="height: 87px;">
                     </div>
                 </div>
                 <div class="card">
                     <img src="chimie92.jpg" class="img-activity">
-                    <div style="display: flex; gap: 10px; margin-top: 15px;">
-                        <img src="chimie3.jpg" style="width: 48%; border-radius: 10px;">
-                        <img src="chimie4.jpg" style="width: 48%; border-radius: 10px;">
-                    </div>
                 </div>
             </div>
         </section>
 
-        <section style="background: #eef2f3; padding: 40px; border-radius: 30px;">
-            <h2 style="color: var(--physics-color) !important;">Tehnologie și Robotică</h2>
+        <section style="background: #eef2f3; padding: 30px; border-radius: 25px;">
+            <h2 style="color: var(--physics-color) !important;">Tehnologie & Robotică</h2>
             <div class="grid">
                 <div class="card">
-                    <div class="video-box">
-                        <video controls style="width: 100%;">
-                            <source src="robot_fizica.mp4" type="video/mp4">
-                        </video>
-                    </div>
-                    <h4>Proiecte de Robotică</h4>
+                    <div class="video-box"><video controls><source src="robot_fizica.mp4" type="video/mp4"></video></div>
+                    <h4>Robotica</h4>
                 </div>
                 <div class="card">
-                    <div class="video-box">
-                        <video controls style="width: 100%;">
-                            <source src="experiment_fizica.mp4" type="video/mp4">
-                        </video>
-                    </div>
+                    <div class="video-box"><video controls><source src="experiment_fizica.mp4" type="video/mp4"></video></div>
                     <h4>Experimente Live</h4>
                 </div>
-            </div>
-            <div class="grid" style="margin-top: 20px;">
-                <img src="expfizica1.jpg" class="img-activity">
-                <img src="fizicap1.jpg" class="img-activity">
-                <img src="9a_fizica.jpg" class="img-activity">
+                <div class="card">
+                    <img src="expfizica1.jpg" class="img-activity">
+                    <h4>Aplicații practice</h4>
+                </div>
             </div>
         </section>
 
         <section>
             <h2>Explorări și Vizite</h2>
             <div class="grid">
-                <div class="card">
-                    <img src="utcn_fizica.jpg" class="img-activity">
-                    <h4 style="margin-top:15px; text-align:center;">Vizite la UTCN</h4>
-                </div>
-                <div class="card">
-                    <img src="pompieri_fizica.jpg" class="img-activity">
-                    <h4 style="margin-top:15px; text-align:center;">Fizica la Pompieri</h4>
-                </div>
-                <div class="card">
-                    <img src="drumetie_fizica_chimie.jpg" class="img-activity">
-                    <h4 style="margin-top:15px; text-align:center;">Știința în Natură</h4>
-                </div>
-            </div>
-            <div class="grid">
-                 <div class="card">
-                    <img src="sapt_spatiului.jpg" class="img-activity">
-                    <h4 style="margin-top:15px; text-align:center;">Săptămâna Spațiului</h4>
-                </div>
-                <div class="card">
-                    <img src="fizica_costumatii.jpg" class="img-activity">
-                    <h4 style="margin-top:15px; text-align:center;">Știința și Arta</h4>
-                </div>
-                <div class="card">
-                    <img src="energie_regenerabila.jpg" class="img-activity">
-                    <h4 style="margin-top:15px; text-align:center;">Energie Regenerabilă</h4>
-                </div>
+                <div class="card"><img src="utcn_fizica.jpg" class="img-activity"><h4>Vizite UTCN</h4></div>
+                <div class="card"><img src="pompieri_fizica.jpg" class="img-activity"><h4>Fizica la Pompieri</h4></div>
+                <div class="card"><img src="drumetie_fizica_chimie.jpg" class="img-activity"><h4>Știința în Natură</h4></div>
+                <div class="card"><img src="sapt_spatiului.jpg" class="img-activity"><h4>Săptămâna Spațiului</h4></div>
+                <div class="card"><img src="fizica_costumatii.jpg" class="img-activity"><h4>Știința și Arta</h4></div>
+                <div class="card"><img src="energie_regenerabila.jpg" class="img-activity"><h4>Energie Regenerabilă</h4></div>
             </div>
         </section>
 
         <section id="aplicatii">
-            <h2>De ce studiem Științele Naturii?</h2>
             <div class="grid">
-                <div class="card" style="border-top: 5px solid var(--chemistry-color);">
-                    <i class="fas fa-flask icon" style="color: var(--chemistry-color);"></i>
-                    <h3>Chimie</h3>
-                    <p>Înțelegem compoziția lumii, de la medicamente la procesele vitale. Este știința transformării materiilor.</p>
+                <div class="card" style="text-align: left;">
+                    <h3 style="margin-bottom:15px;"><i class="fas fa-lightbulb" style="color:var(--accent-color)"></i> Aplicații reale</h3>
+                    <ul>
+                        <li>Vedem direct reacțiile chimice.</li>
+                        <li>Explicăm energia și mișcarea.</li>
+                        <li>Rezolvăm provocări cotidiene.</li>
+                        <li>Studiem mediul prin legi științifice.</li>
+                    </ul>
                 </div>
-                <div class="card" style="border-top: 5px solid var(--physics-color);">
-                    <i class="fas fa-atom icon" style="color: var(--physics-color);"></i>
-                    <h3>Fizică</h3>
-                    <p>Explicăm legile fundamentale: mișcarea, energia și lumina. Este baza oricărei tehnologii moderne.</p>
+                <div class="card" style="text-align: left;">
+                    <h3 style="margin-bottom:15px;"><i class="fas fa-microscope" style="color:var(--physics-color)"></i> Resurse</h3>
+                    <p style="font-size: 0.9rem;">Laboratoare dotate cu eprubete, circuite electrice și aparate de măsură sub îndrumarea profesorilor noștri.</p>
                 </div>
             </div>
         </section>
@@ -336,12 +288,11 @@
 
     <section class="testimonials">
         <div class="container">
-            <h2 style="color: #e67e22 !important;">Cum văd elevii orele?</h2>
+            <h2 style="color: #e67e22 !important;">Vocea Elevilor</h2>
             <div class="testimonial-grid">
-                <div class="testimonial-item">"Ora de chimie îmi place când facem experimente." <span class="author">Ariana, 11A</span></div>
-                <div class="testimonial-item">"La fizică mi se pare interesant când legăm lecțiile de viață." <span class="author">Eliza, 12B</span></div>
-                <div class="testimonial-item">"Dacă sunt atent, încep să înțeleg orice formulă." <span class="author">Berta, 11B</span></div>
-                <div class="testimonial-item">"Îmi plac orele în care lucrăm în echipă." <span class="author">Albert, 12A</span></div>
+                <div class="testimonial-item">"Îmi place când facem experimente." <span class="author">Ariana, 11A</span></div>
+                <div class="testimonial-item">"Fizica explică viața reală." <span class="author">Eliza, 12B</span></div>
+                <div class="testimonial-item">"Lucrul în echipă este cel mai fain." <span class="author">Albert, 12A</span></div>
             </div>
         </div>
     </section>
