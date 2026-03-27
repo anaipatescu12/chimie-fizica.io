@@ -499,7 +499,7 @@ section { padding: 96px 0; }
 .media-grid {
   display: grid;
   grid-template-columns: 2fr 1fr 1fr;
-  grid-template-rows: 240px 240px;
+  grid-template-rows: 220px 220px;
   gap: 12px;
   border-radius: var(--radius);
   overflow: hidden;
@@ -509,6 +509,7 @@ section { padding: 96px 0; }
   background: var(--border);
   position: relative;
   overflow: hidden;
+  min-height: 180px;
 }
 
 .media-item:first-child {
@@ -781,7 +782,7 @@ footer strong {
     <p class="hero-sub animate-in delay-2">Explorăm lumea atomilor și a legilor naturii. De la experimente în laborator la olimpiade naționale — chimia și fizica devin pasiune.</p>
     <div class="hero-cta animate-in delay-3">
       <a href="#profesori" class="btn-primary">
-        <i class="fas fa-users"></i> Cunoaște viitorii tăi profesori
+        <i class="fas fa-users"></i> Cunoaște echipa
       </a>
       <a href="#activitati" class="btn-ghost">
         Activitățile noastre <i class="fas fa-arrow-right" style="font-size:0.8em"></i>
@@ -894,24 +895,25 @@ footer strong {
     <span class="dept-label ch reveal"><i class="fas fa-flask" style="margin-right:6px"></i> Catedra de Chimie</span>
     <div class="teachers-row">
       <div class="teacher-card reveal">
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ45c5TpNBviqg2cB0eIE0tVPerK2kWPlh3Zw&s" class="teacher-avatar" alt="Mureșan Doina" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
-        <div class="teacher-avatar-placeholder ch-avatar" style="display:none">MD</div>
-        <div class="teacher-info">
-          <h4>Mureșan Doina</h4>
-          <span class="ch-label">Profesor de Chimie</span>
-        </div>
-      </div>
-      <div class="teacher-card reveal delay-1">
-        <div class="teacher-avatar-placeholder ch-avatar">BL</div>
+        <img src="https://raw.githubusercontent.com/anaipatescu12/chimie-fizica.io/main/laurenta.png" class="teacher-avatar" alt="Bărăian Laurența" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="teacher-avatar-placeholder ch-avatar" style="display:none">BL</div>
         <div class="teacher-info">
           <h4>Bărăian Laurența</h4>
           <span class="ch-label">Profesor de Chimie</span>
         </div>
       </div>
-      <div class="teacher-card reveal delay-2">
-        <div class="teacher-avatar-placeholder ch-avatar">DL</div>
+      <div class="teacher-card reveal delay-1">
+        <img src="https://raw.githubusercontent.com/anaipatescu12/chimie-fizica.io/main/Dunca-livia1.png" class="teacher-avatar" alt="Dunca Livia" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="teacher-avatar-placeholder ch-avatar" style="display:none">DL</div>
         <div class="teacher-info">
           <h4>Dunca Livia</h4>
+          <span class="ch-label">Profesor de Chimie</span>
+        </div>
+      </div>
+      <div class="teacher-card reveal delay-2">
+        <div class="teacher-avatar-placeholder ch-avatar">MD</div>
+        <div class="teacher-info">
+          <h4>Mureșan Doina</h4>
           <span class="ch-label">Profesor de Chimie</span>
         </div>
       </div>
@@ -920,14 +922,16 @@ footer strong {
     <span class="dept-label ph reveal"><i class="fas fa-atom" style="margin-right:6px"></i> Catedra de Fizică</span>
     <div class="teachers-row">
       <div class="teacher-card reveal">
-        <div class="teacher-avatar-placeholder ph-avatar">CF</div>
+        <img src="https://raw.githubusercontent.com/anaipatescu12/chimie-fizica.io/main/cioaba.png" class="teacher-avatar" alt="Cioabă Felicia" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="teacher-avatar-placeholder ph-avatar" style="display:none">CF</div>
         <div class="teacher-info">
           <h4>Cioabă Felicia</h4>
           <span class="ph-label">Profesor de Fizică</span>
         </div>
       </div>
       <div class="teacher-card reveal delay-1">
-        <div class="teacher-avatar-placeholder ph-avatar">VC</div>
+        <img src="https://raw.githubusercontent.com/anaipatescu12/chimie-fizica.io/main/cosminavadann.png" class="teacher-avatar" alt="Vădan Cosmina" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="teacher-avatar-placeholder ph-avatar" style="display:none">VC</div>
         <div class="teacher-info">
           <h4>Vădan Cosmina</h4>
           <span class="ph-label">Profesor de Fizică</span>
@@ -992,33 +996,115 @@ footer strong {
   <div class="container">
     <p class="section-tag ph reveal"><i class="fas fa-images"></i> Galerie</p>
     <h2 class="section-title reveal">Momente din laborator<br>și de pe teren</h2>
-    <p class="section-desc reveal">Imagini și filmări din activitățile noastre.</p>
+    <p class="section-desc reveal">Imagini și filmări din activitățile noastre de-a lungul anului.</p>
 
-    <div class="media-grid reveal">
+    <!-- Sub-section: Chimie -->
+    <p class="dept-label ch reveal" style="margin-bottom: 20px;"><i class="fas fa-flask" style="margin-right:6px"></i> Laborator de Chimie</p>
+    <div class="media-grid reveal" style="margin-bottom: 40px;">
       <div class="media-item">
-        <img src="laborator_chimie.png" alt="Laborator chimie" onerror="this.parentElement.querySelector('.media-placeholder').style.display='flex';this.remove()">
-        <div class="media-placeholder" style="display:none;width:100%;height:100%;position:absolute;inset:0">🔬</div>
-        <div class="media-label">Laborator de Chimie</div>
+        <img src="https://raw.githubusercontent.com/anaipatescu12/chimie-fizica.io/main/laborator_chimie.png" alt="Laborator chimie">
+        <div class="media-label">Laboratorul nostru</div>
       </div>
       <div class="media-item">
-        <img src="chimie1.jpg" alt="Chimie 1" onerror="this.parentElement.querySelector('.media-placeholder').style.display='flex';this.remove()">
-        <div class="media-placeholder" style="display:none;width:100%;height:100%;position:absolute;inset:0">⚗️</div>
-        <div class="media-label">Experiment chimic</div>
+        <img src="https://raw.githubusercontent.com/anaipatescu12/chimie-fizica.io/main/chimie1.jpg" alt="Chimie 1">
+        <div class="media-label">Experimente chimice</div>
       </div>
       <div class="media-item">
-        <img src="expfizica1.jpg" alt="Fizică" onerror="this.parentElement.querySelector('.media-placeholder').style.display='flex';this.remove()">
-        <div class="media-placeholder" style="display:none;width:100%;height:100%;position:absolute;inset:0">⚡</div>
+        <img src="https://raw.githubusercontent.com/anaipatescu12/chimie-fizica.io/main/chimie2.jpg" alt="Chimie 2">
+        <div class="media-label">Reacții spectaculare</div>
+      </div>
+      <div class="media-item">
+        <img src="https://raw.githubusercontent.com/anaipatescu12/chimie-fizica.io/main/chimie3.jpg" alt="Chimie 3">
+        <div class="media-label">Sinteze chimice</div>
+      </div>
+      <div class="media-item">
+        <img src="https://raw.githubusercontent.com/anaipatescu12/chimie-fizica.io/main/chimie4.jpg" alt="Chimie 4">
+        <div class="media-label">Lucru în laborator</div>
+      </div>
+      <div class="media-item">
+        <img src="https://raw.githubusercontent.com/anaipatescu12/chimie-fizica.io/main/chimie92.jpg" alt="Chimie 92">
+        <div class="media-label">Analiză chimică</div>
+      </div>
+    </div>
+
+    <!-- Sub-section: Fizică -->
+    <p class="dept-label ph reveal" style="margin-bottom: 20px;"><i class="fas fa-atom" style="margin-right:6px"></i> Fizică & Tehnologie</p>
+    <div class="media-grid reveal" style="margin-bottom: 40px;">
+      <div class="media-item" style="grid-row: span 2;">
+        <video controls style="width:100%;height:100%;object-fit:cover;display:block;">
+          <source src="https://raw.githubusercontent.com/anaipatescu12/chimie-fizica.io/main/robot_fizica.mp4" type="video/mp4">
+        </video>
+        <div class="media-label">🤖 Robotică</div>
+      </div>
+      <div class="media-item">
+        <video controls style="width:100%;height:100%;object-fit:cover;display:block;">
+          <source src="https://raw.githubusercontent.com/anaipatescu12/chimie-fizica.io/main/experiment_fizica.mp4" type="video/mp4">
+        </video>
+        <div class="media-label">▶ Experiment live</div>
+      </div>
+      <div class="media-item">
+        <video controls style="width:100%;height:100%;object-fit:cover;display:block;">
+          <source src="https://raw.githubusercontent.com/anaipatescu12/chimie-fizica.io/main/experiment_fizica2.mp4" type="video/mp4">
+        </video>
+        <div class="media-label">▶ Experiment live 2</div>
+      </div>
+      <div class="media-item">
+        <img src="https://raw.githubusercontent.com/anaipatescu12/chimie-fizica.io/main/expfizica1.jpg" alt="Experiment fizica">
         <div class="media-label">Aplicații practice</div>
       </div>
       <div class="media-item">
-        <img src="utcn_fizica.jpg" alt="UTCN" onerror="this.parentElement.querySelector('.media-placeholder').style.display='flex';this.remove()">
-        <div class="media-placeholder" style="display:none;width:100%;height:100%;position:absolute;inset:0">🏛️</div>
+        <img src="https://raw.githubusercontent.com/anaipatescu12/chimie-fizica.io/main/experiment_fizicachimie.jpg" alt="Experiment fizica chimie">
+        <div class="media-label">Fizică & Chimie</div>
+      </div>
+    </div>
+
+    <!-- Sub-section: Explorări -->
+    <p class="dept-label reveal" style="margin-bottom: 20px; background: rgba(196,92,20,0.12); color: var(--accent);"><i class="fas fa-map-marked-alt" style="margin-right:6px"></i> Vizite & Explorări</p>
+    <div class="media-grid reveal" style="margin-bottom: 40px;">
+      <div class="media-item">
+        <img src="https://raw.githubusercontent.com/anaipatescu12/chimie-fizica.io/main/utcn_fizica.jpg" alt="UTCN">
         <div class="media-label">Vizite UTCN</div>
       </div>
       <div class="media-item">
-        <img src="sapt_spatiului.jpg" alt="Spatiu" onerror="this.parentElement.querySelector('.media-placeholder').style.display='flex';this.remove()">
-        <div class="media-placeholder" style="display:none;width:100%;height:100%;position:absolute;inset:0">🚀</div>
+        <img src="https://raw.githubusercontent.com/anaipatescu12/chimie-fizica.io/main/pompieri_fizica.jpg" alt="Pompieri">
+        <div class="media-label">La Pompieri</div>
+      </div>
+      <div class="media-item">
+        <img src="https://raw.githubusercontent.com/anaipatescu12/chimie-fizica.io/main/drumetie_fizica_chimie.jpg" alt="Drumetie">
+        <div class="media-label">În natură</div>
+      </div>
+      <div class="media-item">
+        <img src="https://raw.githubusercontent.com/anaipatescu12/chimie-fizica.io/main/sapt_spatiului.jpg" alt="Spatiu">
         <div class="media-label">Săptămâna Spațiului</div>
+      </div>
+      <div class="media-item">
+        <img src="https://raw.githubusercontent.com/anaipatescu12/chimie-fizica.io/main/energie_regenerabila.jpg" alt="Energie regenerabila">
+        <div class="media-label">Energie regenerabilă</div>
+      </div>
+    </div>
+
+    <!-- Sub-section: Prezentări & Momente speciale -->
+    <p class="dept-label reveal" style="margin-bottom: 20px; background: rgba(26,63,107,0.1); color: var(--ph-mid);"><i class="fas fa-star" style="margin-right:6px"></i> Prezentări & Momente speciale</p>
+    <div class="media-grid reveal">
+      <div class="media-item">
+        <img src="https://raw.githubusercontent.com/anaipatescu12/chimie-fizica.io/main/prezentare_fizica.jpg" alt="Prezentare fizica">
+        <div class="media-label">Prezentare fizică</div>
+      </div>
+      <div class="media-item">
+        <img src="https://raw.githubusercontent.com/anaipatescu12/chimie-fizica.io/main/prez_fizica2.jpg" alt="Prezentare fizica 2">
+        <div class="media-label">Prezentare fizică 2</div>
+      </div>
+      <div class="media-item">
+        <img src="https://raw.githubusercontent.com/anaipatescu12/chimie-fizica.io/main/fizicap1.jpg" alt="Fizica p1">
+        <div class="media-label">Fizică aplicată</div>
+      </div>
+      <div class="media-item">
+        <img src="https://raw.githubusercontent.com/anaipatescu12/chimie-fizica.io/main/fizica_costumatii.jpg" alt="Costumatii">
+        <div class="media-label">Costumaţii & Roluri</div>
+      </div>
+      <div class="media-item">
+        <img src="https://raw.githubusercontent.com/anaipatescu12/chimie-fizica.io/main/9a_fizica.jpg" alt="9a fizica">
+        <div class="media-label">Clasa 9A</div>
       </div>
     </div>
   </div>
