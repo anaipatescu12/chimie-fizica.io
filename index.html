@@ -132,6 +132,27 @@
         .discipline { color: var(--chemistry-color); font-size: 0.85rem; font-weight: 600; }
         .discipline-phys { color: var(--physics-color); font-size: 0.85rem; font-weight: 600; }
 
+        /* --- NOILE STILURI PENTRU IMAGINI --- */
+        .img-activity {
+            width: 100%;
+            border-radius: 12px;
+            object-fit: cover;
+            transition: 0.4s ease;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            margin-bottom: 15px;
+        }
+        .img-activity:hover {
+            transform: scale(1.03);
+        }
+        .video-box {
+            width: 100%;
+            border-radius: 15px;
+            overflow: hidden;
+            background: #000;
+            margin-bottom: 20px;
+        }
+        /* ------------------------------------ */
+
         /* List Items */
         ul { list-style: none; }
         ul li {
@@ -141,7 +162,7 @@
         }
         ul li::before {
             content: '\f00c';
-            font-family: 'Font Awesome 5 Free';
+            font-family: 'Font Awesome 6 Free';
             font-weight: 900;
             position: absolute;
             left: 0;
@@ -229,6 +250,60 @@
             </div>
         </section>
 
+        <section>
+            <h2 style="color: var(--chemistry-color) !important;">Laboratorul în Acțiune (Chimie)</h2>
+            <div class="grid">
+                <div class="card">
+                    <img src="laborator_chimie.png" class="img-activity" alt="Laborator">
+                    <p>Studiul începe în laboratorul nostru dotat modern.</p>
+                </div>
+                <div class="card">
+                    <div style="display: flex; gap: 10px;">
+                        <img src="chimie1.jpg" class="img-activity" style="width: 50%;">
+                        <img src="chimie2.jpg" class="img-activity" style="width: 50%;">
+                    </div>
+                    <p>Experimente cu substanțe și reacții chimice surprinzătoare.</p>
+                </div>
+                <div class="card">
+                    <img src="chimie92.jpg" class="img-activity">
+                    <p>Elevii descoperă compoziția materiei prin practică.</p>
+                    <div style="display: flex; gap: 5px; margin-top: 10px;">
+                        <img src="chimie3.jpg" style="width: 48%; border-radius: 5px;">
+                        <img src="chimie4.jpg" style="width: 48%; border-radius: 5px;">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section style="background: #eef2f3; padding: 40px; border-radius: 20px;">
+            <h2 style="color: var(--physics-color) !important;">Tehnologie și Robotică (Fizică)</h2>
+            <div class="grid">
+                <div class="card">
+                    <div class="video-box">
+                        <video controls style="width: 100%;">
+                            <source src="robot_fizica.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <h4>Proiecte de Robotică</h4>
+                    <p>Fizica aplicată în mecanisme moderne.</p>
+                </div>
+                <div class="card">
+                    <div class="video-box">
+                        <video controls style="width: 100%;">
+                            <source src="experiment_fizica.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <h4>Experimente Live</h4>
+                    <p>Demonstrații practice ale legilor naturii.</p>
+                </div>
+            </div>
+            <div class="grid" style="margin-top: 20px;">
+                <img src="expfizica1.jpg" class="img-activity">
+                <img src="fizicap1.jpg" class="img-activity">
+                <img src="9a_fizica.jpg" class="img-activity">
+            </div>
+        </section>
+
         <section class="grid">
             <div class="card chemistry-card">
                 <i class="fas fa-flask icon" style="color: var(--chemistry-color);"></i>
@@ -239,6 +314,38 @@
                 <i class="fas fa-atom icon" style="color: var(--physics-color);"></i>
                 <h3>De ce Fizică?</h3>
                 <p>Fizica explică legile fundamentale ale naturii: mișcarea, energia și lumina. Este baza tehnologiilor moderne care ne înconjoară.</p>
+            </div>
+        </section>
+
+        <section>
+            <h2>Explorări în afara clasei</h2>
+            <div class="grid">
+                <div class="card">
+                    <img src="utcn_fizica.jpg" class="img-activity">
+                    <h4>Vizite la UTCN</h4>
+                </div>
+                <div class="card">
+                    <img src="pompieri_fizica.jpg" class="img-activity">
+                    <h4>Fizica la Pompieri</h4>
+                </div>
+                <div class="card">
+                    <img src="drumetie_fizica_chimie.jpg" class="img-activity">
+                    <h4>Știința în Natură</h4>
+                </div>
+            </div>
+            <div class="grid">
+                 <div class="card">
+                    <img src="sapt_spatiului.jpg" class="img-activity">
+                    <h4>Săptămâna Spațiului</h4>
+                </div>
+                <div class="card">
+                    <img src="fizica_costumatii.jpg" class="img-activity">
+                    <h4>Știința și Arta</h4>
+                </div>
+                <div class="card">
+                    <img src="energie_regenerabila.jpg" class="img-activity">
+                    <h4>Energie Regenerabilă</h4>
+                </div>
             </div>
         </section>
 
@@ -264,13 +371,6 @@
             <div class="card">
                 <h3><i class="fas fa-chalkboard-teacher"></i> Cum se desfășoară orele?</h3>
                 <p>Îmbinăm teoria cu practica. Lucrăm în echipă, discutăm rezultatele experimentelor și tragem concluzii logice.</p>
-            </div>
-        </section>
-
-        <section style="text-align: center;">
-            <h2>La ce participăm?</h2>
-            <div class="card" style="max-width: 800px; margin: 0 auto;">
-                <p>De la olimpiade județene și naționale, la târguri de știință și proiecte educaționale care ne dezvoltă gândirea critică.</p>
             </div>
         </section>
 
